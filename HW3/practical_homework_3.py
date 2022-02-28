@@ -55,4 +55,4 @@ class Singleton:
 
 free  = Singleton()
 free.choice = 'busy'
-free.busy_to_free()
+print(free.busy_to_free())
