@@ -38,7 +38,7 @@ adapter.words()
 adapter.translator()
 
 
-# 2
+# 3
 class Singleton:
         __shared_state = dict()
 
