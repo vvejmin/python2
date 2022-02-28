@@ -44,3 +44,9 @@ class Singleton:
                 if Singleton.__shared_state.keys('user_2') == 'busy':
                         Singleton()
                 return Singleton.__shared_state
+
+        def free_to_busy(self):
+                if Singleton.__shared_state.keys('user') == 'free':
+                        Singleton()
+                return Singleton.__shared_state
+
