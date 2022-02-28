@@ -35,18 +35,20 @@ adapter.translator()
 
 # 2
 class Singleton:
-        __shared_state = {'user_1': 'free', 'user_2': 'busy', 'user_3': 'free'}
+        __shared_state = dict()
 
         def __init__(self):
                 self.__dict__ = self.__shared_state
 
         def busy_to_free(self):
-                if Singleton.__shared_state.keys('user_2') == 'busy':
+                if Singleton.__shared_state == 'busy':
                         Singleton()
                 return Singleton.__shared_state
 
         def free_to_busy(self):
-                if Singleton.__shared_state.keys('user') == 'free':
+                if Singleton.__shared_state ==  'free':
                         Singleton()
                 return Singleton.__shared_state
 
+free  = Singleton()
+free.busy_to_free()
