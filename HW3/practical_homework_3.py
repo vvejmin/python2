@@ -40,6 +40,9 @@ class Singleton:
         def __init__(self):
                 self.__dict__ = self.__shared_state
 
+        def choose(self, choice):
+                self.choice = choice
+
         def busy_to_free(self):
                 if Singleton.__shared_state == 'busy':
                         Singleton()
@@ -51,4 +54,5 @@ class Singleton:
                 return Singleton.__shared_state
 
 free  = Singleton()
+free.choice = 'busy'
 free.busy_to_free()
