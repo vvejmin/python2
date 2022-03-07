@@ -17,10 +17,12 @@ class ProducingAPI2(ProducingAPI):
             print(f'the email is {texts} {imgs}')
 
 class Email:
-        pass
+        def __init__(self, email):
+                pass
 
 class Msg:
-        pass
+        def __init__(self):
+                pass
 
 
 # problem 2
