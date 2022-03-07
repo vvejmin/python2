@@ -1,14 +1,23 @@
 from __future__ import annotations
 from abc import ABC, abstractmethod
 
-class Email(ABC):
-        def send(self):
-                pass
+class ProducingAPI(ABC):
+
+        @abstractmethod
+        def send(self, texts, imgs):
+               pass
+
+class Email(ProducingAPI):
+    def send(self, texts, imgs):
+        self.texts = texts
+        self.imgs = imgs
 
 
-class SMS(ABC):
-        def send(self):
-                pass
+class SMS(ProducingAPI):
+    def send(self, texts, imgs):
+        self.texts = texts
+        self.imgs = imgs
+
 
 
 # problem 2
