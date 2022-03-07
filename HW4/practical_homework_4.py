@@ -7,17 +7,20 @@ class ProducingAPI(ABC):
         def send(self, texts, imgs):
                pass
 
-class Email(ProducingAPI):
+class ProducingAPI1(ProducingAPI):
     def send(self, texts, imgs):
-        self.texts = texts
-        self.imgs = imgs
+       print(f'the email is {texts} {imgs}')
 
 
-class SMS(ProducingAPI):
+class ProducingAPI2(ProducingAPI):
     def send(self, texts, imgs):
-        self.texts = texts
-        self.imgs = imgs
+            print(f'the email is {texts} {imgs}')
 
+class Email:
+        pass
+
+class Msg:
+        pass
 
 
 # problem 2
