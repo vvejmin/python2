@@ -1,29 +1,34 @@
 from __future__ import annotations
 from abc import ABC, abstractmethod
 
-class ProducingAPI(ABC):
+class MessageSender(ABC):
 
         @abstractmethod
         def send(self, texts, imgs):
                pass
 
-class ProducingAPI1(ProducingAPI):
+class EmailSender(MessageSender):
     def send(self, texts, imgs):
        print(f'the email is {texts} {imgs}')
 
 
-class ProducingAPI2(ProducingAPI):
-    def send(self, texts, imgs):
-            print(f'the email is {texts} {imgs}')
+class SMSSender(MessageSender):
+    def send(self, texts):
+            print(f'the email is {texts}')
 
-class Email:
-        def __init__(self, email):
-                pass
+class Client:
+        def __init__(self, sender):
+                self.sender = sender
 
-class Msg:
-        def __init__(self):
-                pass
+        def send_message(self, text):
+            self.sender.send.text
 
+client1 = Client(EmailSender())
+client1.send_message('Hello')
+
+
+client2 = Client(EmailSender())
+client2.send_message('Hello')
 
 # problem 2
 class InstrumentCollection:
