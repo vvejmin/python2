@@ -1,31 +1,31 @@
-# 1
-# class Person:
-#           def __init__(self, name, last_name, email, age):
-#                   self.name = name
-#                   self.last_name = last_name
-#                   self.email = email
-#                   self.age = age
-#
-#           def age(self):
-#                 pass
-#
-# class Decorator(Person):
-#
-#         def __init__(self, person:Person):
-#                 super().__init__(self.name, self.last_name, self.email, self.age)
-#                 self._person = person
-#
-#         def age(self):
-#                 if self._person.age < 14:
-#                        print(f'&&& self._person.name - self._person.last_name - self._person.email &&&')
-#                 else:
-#                         print(f'&&& self._person.name - self._person.last_name - self._person.email')
-#
-# def client_code(person: Person):
-#         print(f'RESULT: {person.age()}', end='')
-#
-# new_person = Decorator('Ejmin','Vartoumian','Vartoumian.Ejmin91@gmail.com',31)
-# client_code(new_person)
+#1
+class Person:
+          def __init__(self, name, last_name, email, age):
+                  self.name = name
+                  self.last_name = last_name
+                  self.email = email
+                  self.age = age
+
+          def age(self):
+                pass
+
+class Decorator(Person):
+
+        def __init__(self, person:Person):
+                super().__init__(self.name, self.last_name, self.email, self.age)
+                self._person = person
+
+        def age(self):
+                if self._person.age < 14:
+                       print(f'&&& self._person.name - self._person.last_name - self._person.email &&&')
+                else:
+                        print(f'&&& self._person.name - self._person.last_name - self._person.email')
+
+def client_code(person: Person):
+        print(f'RESULT: {person.age()}', end='')
+
+new_person = Decorator('Ejmin','Vartoumian','Vartoumian.Ejmin91@gmail.com',31)
+client_code(new_person)
 
 
 
