@@ -35,10 +35,10 @@
 import time
 
 def time_to_sleep(func):
-        def wrapper(*args, **kwargs):
+        def wrapper():
                 begin = time.time()
 
-                func(*args, **kwargs)
+                func()
 
                 end = time.time()
                 print("total time taken in :", func.__name__, end - begin)
