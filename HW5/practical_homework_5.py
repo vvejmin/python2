@@ -1,33 +1,27 @@
 #1
-class Person:
-          def __init__(self, name, last_name, email, age):
-                  self.name = name
-                  self.last_name = last_name
-                  self.email = email
-                  self.age = age
+def person(func):
+        def wrapper(*args, **kwargs):
+                value = func(*args, **kwargs)
 
-          def age(self):
+                return f'&&& {value} &&&'
+        return wrapper
+
+@person
+def asteriks_wrapper(func):
+        pass
+
+class Person:
+
+        def __init__(self, name, last_name, age, email):
+                self.name = name
+                self.last_name = last_name
+                self.age = age
+                self.email = email
+
+        def print_info(self):
                 pass
 
-class Decorator(Person):
-
-        def __init__(self, person:Person):
-                super().__init__(self.name, self.last_name, self.email, self.age)
-                self._person = person
-
-        def age(self):
-                if self._person.age < 14:
-                       print(f'&&& self._person.name - self._person.last_name - self._person.email &&&')
-                else:
-                        print(f'&&& self._person.name - self._person.last_name - self._person.email')
-
-def client_code(person: Person):
-        print(f'RESULT: {person.age()}', end='')
-
-new_person = Decorator('Ejmin','Vartoumian','Vartoumian.Ejmin91@gmail.com',31)
-client_code(new_person)
-
-
+person = Person()
 
 
 

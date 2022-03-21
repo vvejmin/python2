@@ -31,9 +31,22 @@ client2 = Client(EmailSender())
 client2.send_message('Hello')
 
 # problem 2
+class Instrument:
+
+        def __init__(self, functionality):
+                self.functionality = functionality
+
+        def make(self):
+                self.
 class InstrumentCollection:
-        def Make(self):
-                pass
+        def __init__(self, functionality):
+                self.functionality = self.instrument_collections = []
+
+box = Box('Box')
+
+
+
+
 
 class Box(InstrumentCollection):
         def __init__(self, instruments: list):
