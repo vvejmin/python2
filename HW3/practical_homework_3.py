@@ -1,19 +1,19 @@
 # 1
-import abc
+from abc import ABC, abstractmethod
 
 
-class Target(metaclass=abc.ABCMeta):
+class Target(ABC):
 
         def __init__(self):
-                self.adaptee = Adaptee()
+            self.adaptee = Adaptee()
 
-        @abc.abstractmethod
+        @abstractmethod
         def words(self):
-                pass
+            pass
 
-        @abc.abstractmethod
+        @abstractmethod
         def translator(self):
-                pass
+            pass
 
 
 class Adapter(Target):

@@ -1,4 +1,4 @@
-from abc import ABCMeta, abstractmethod, abstractstaticmethod
+from abc import ABCMeta, abstractmethod
 
 
 # 1
@@ -9,11 +9,11 @@ class ShapeFactory(metaclass=ABCMeta):
 
 
 class Circle(ShapeFactory):
-        def __init__(self):
-                pass
+     def __init__(self):
+           pass
 
-        def draw(self):
-                print('circle shape')
+     def draw(self):
+            print('circle shape')
 
 
 class Square(ShapeFactory):
