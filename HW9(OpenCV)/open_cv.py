@@ -1,8 +1,8 @@
 import cv2 as cv
 # Problem 1
-img_1 = cv.imread('pic1.jpg')
-img_2 = cv.imread('pic2.jpg')
-img_3 = cv.imread('pic3.jpg')
+img_1 = cv.imread('../HW11/pic1.jpg')
+img_2 = cv.imread('../HW11/pic2.jpg')
+img_3 = cv.imread('../HW11/pic3.jpg')
 
 cv.imshow('Pic1', img_1)
 cv.imshow('Pic2', img_2)
@@ -41,7 +41,7 @@ def rescaleFrame(frame, scale=0.5):
         return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
 
 
-img = cv.imread('pic1.jpg')
+img = cv.imread('../HW11/pic1.jpg')
 img_rescaled = rescaleFrame(img, 0.2)
 
 cv.imshow('Pic1', img)
@@ -89,7 +89,10 @@ cv.imshow('Dog', img)
 blank = np.zeros((300,300, 3), dtype = 'uint8')
 cv.imshow('Blank', blank)
 
-cv.circle(blank, (200,200), 50, (0,255, 0), thickness = -1)
-cv.imshow('Circle', blank)
+cv.circle(img, (img.sahpe[1]//2, img.shape[0]//2), min(img.shape[0], img.shape[1])//8, thickness = -1)
+cv.imshow('Circle', img)
 
 # Problem 6
+
+
+# Problem 7
