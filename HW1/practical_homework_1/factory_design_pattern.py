@@ -1,18 +1,17 @@
-from abc import ABCMeta, abstractmethod
+from abc import ABCMeta
 
 
 # 1
 class ShapeFactory(metaclass=ABCMeta):
-        @abstractmethod
         def draw(self):
                 pass
 
 
 class Circle(ShapeFactory):
-     def __init__(self):
+        def __init__(self):
            pass
 
-     def draw(self):
+        def draw(self):
             print('circle shape')
 
 
