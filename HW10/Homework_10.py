@@ -167,4 +167,4 @@ cv.imshow('contours drawn using canny_2', blank)
 cv.drawContours(blank, contours_blur, -1, (155, 0, 0), 2)
 cv.imshow('contours drawn using blur', blank)
 
-cv.waitKey(0)
+cv.waitKey(0
